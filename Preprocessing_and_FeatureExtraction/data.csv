@@ -1,0 +1,188 @@
+no,dirName,area,keyword,Tag,count,exactFlag,dateformat
+256,AlterNet,4,"the_body body_story clearfix",DIV,0,0,0
+255,AlterNet,4,"the_body body_living clearfix",DIV,0,0,0
+254,AlterNet,4,"the_body body_rights clearfix",DIV,0,0,0
+253,AlterNet,4,"the_body body_news-politics clearfix",DIV,0,0,0
+252,AlterNet,4,"the_body body_environment clearfix",DIV,0,0,0
+381,Boston,3,content-byline__details,DIV,0,0,1
+382,Boston,4,content-text,DIV,0,0,0
+250,AlterNet,4,"the_body body_media-culture clearfix",DIV,0,0,0
+249,AlterNet,3,date-display-single,SPAN,0,0,1
+380,BBC,3,"publication-date index-body",SPAN,0,0,1
+247,AlterNet,4,"the_body body_economy clearfix",DIV,0,0,0
+246,AlterNet,1,"<H1 property=""dc:title"" datatype="""" class=""node-title"">",,0,1,0
+245,Aljazeera,3,"<TIME datetime=""24 Aug 2014 20:22 GMT"">",,0,1,1
+243,Aljazeera,3,"09 Nov 2014 10:51 GMT",TIME,0,0,1
+244,Aljazeera,3,"10 Oct 2014 17:13 GMT",TIME,0,0,2
+242,Aljazeera,3,"<TIME datetime=""23 Oct 2014 10:47 GMT"">",,0,1,1
+241,Aljazeera,3,"11 Mar 2016 18:11 GMT",TIME,0,0,1
+240,Aljazeera,3,"13 Nov 2014 20:27 GMT",TIME,0,0,1
+239,Aljazeera,3,"25 Nov 2014 10:46 GMT",TIME,0,0,1
+238,Aljazeera,3,"21 Aug 2014 15:22 GMT",TIME,0,0,1
+236,Aljazeera,4,article-body,DIV,0,0,0
+237,Aljazeera,3,"03 Oct 2014 15:08 GMT",TIME,0,0,1
+235,Aljazeera,2,/topics/people/john-kerry.html,A,0,0,0
+234,Aljazeera,3,"08 Oct 2014 16:59 GMT",TIME,0,0,1
+233,Aljazeera,1,"<H1 class=""heading-story"">",,0,1,0
+232,ABCNews,4,article-copy,DIV,0,0,0
+231,ABCNews,3,timestamp,SPAN,0,0,1
+230,ABCNews,2,"<DIV rel=""author"" id=""SydneyLupkin"" class=""author has-bio"">",,0,1,0
+229,ABCNews,1,<H1>,,1,1,0
+228,BBC,4,"map-body display-feature-phone-only",DIV,0,0,0
+227,BBC,3,<STRONG>,,0,1,2
+226,BBC,1,story-body__h1,H1,0,0,0
+225,BBC,1,cta,SPAN,0,0,0
+224,BBC,2,"<SPAN class=""byline__name"">",,0,1,0
+223,BBC,4,"<DIV class=""story-body__inner"" property=""articleBody"">",,0,1,0
+222,BBC,3,"date date--v2",DIV,0,0,1
+221,BBC,1,"<H1 class=""story-body__h1"">",,0,1,0
+220,Boston,4,"<DIV class=""mt-story-text-share article-txt-top no-flow entry-txt"">",,0,1,0
+219,Boston,2,about-this-blog,SECTION,0,0,0
+218,Boston,1,"<H1 class=""story-h1"">",,0,1,0
+217,Boston,4,"<DIV class=""blogText"">",,0,1,0
+216,Boston,3,dateline,SPAN,0,0,1
+215,Boston,2,"<P class=""byline"">",,0,1,0
+214,Boston,1,<H1>,,0,1,0
+213,Boston,2,"<DIV class=""content-byline__producer"">",,0,1,0
+212,Boston,4,"content-text content-text-article",DIV,0,0,0
+210,Boston,2,http://www.boston.com/author/allison-pohle,A,0,0,0
+211,Boston,3,"<DIV class=""content-byline__timestamp"">",,0,1,1
+209,Boston,1,"<H1 class=""content-header__headline"">",,0,1,0
+208,NYtimes,4,,NYT_TEXT,0,0,0
+207,NYtimes,2,byline,DIV,0,0,0
+426,SkyNews,3,last-updated,DIV,0,0,0
+205,NYtimes,1,"<NYT_HEADLINE version=""1.0"" type="" "">",,0,1,0
+204,NYtimes,2,nytint-post-leadin,P,0,0,0
+203,NYtimes,4,"<DIV class=""nytint-post"">",,0,1,0
+310,MiamiHerald,2,ng_byline_name,SPAN,0,0,0
+201,NYtimes,1,"<H1 class=""nytint-post-headline"">",,0,1,0
+375,ABCNews,1,headline,H1,0,0,0
+374,ABCAU,2,byline,DIV,0,0,0
+198,ABCAU,4,"article section",DIV,0,0,0
+197,ABCAU,3,timestamp,SPAN,0,0,1
+196,ABCAU,1,<H1>,,0,1,0
+257,AlterNet,4,"the_body body_activism clearfix",DIV,0,0,0
+258,AlterNet,4,"the_body body_world clearfix",DIV,0,0,0
+259,Aljazeera,3,"02 May 2013 08:31 GMT",TIME,0,0,1
+260,Aljazeera,3,"23 Aug 2013?09:53 GMT",TIME,0,0,1
+261,BBC,1,primary-heading,H1,0,0,0
+262,BBC,2,index-body,SPAN,0,0,0
+263,BBC,3,"publication-date index-body",SPAN,0,0,1
+264,BBC,4,body-content,DIV,0,0,0
+265,CBC,1,"<H1 class=""story-title"">",,0,1,0
+266,CBC,3,delimited,SPAN,0,0,1
+267,CBC,4,story-content,DIV,0,0,0
+268,CBSNews,1,title,H1,0,0,0
+269,CBSNews,3,time,SPAN,0,0,1
+270,CBSNews,4,entry,DIV,0,0,0
+271,ChicagoTribune,1,trb_ar_hl_t,H1,0,0,0
+272,ChicagoTribune,4,trb_ar_page,DIV,0,0,0
+273,CNN,1,pg-headline,H1,0,0,0
+274,CNN,2,metadata__byline__author,SPAN,0,0,0
+275,CNN,3,"metadata__info js-byline-images",DIV,0,0,1
+276,CSmonitor,1,headline,H1,0,0,0
+277,CSmonitor,3,date-published,TIME,0,0,1
+278,CSmonitor,2,author,SPAN,0,0,0
+279,CSmonitor,4,story-body,DIV,0,0,0
+280,EarthTimes,1,article_heading,H1,0,0,0
+281,EarthTimes,3,story-header,DIV,0,0,1
+282,EarthTimes,2,author,A,0,0,0
+283,EarthTimes,4,story-body,DIV,0,0,0
+396,Independent,1,"<H1 itemprop=""headline"" class="" "">",,0,1,0
+285,EuroNews,3,title-wrap-new,DIV,0,0,1
+286,EuroNews,4,articleTranscript,DIV,0,0,0
+287,FinancialTimes,1,,H1,0,0,0
+288,FinancialTimes,4,storyContent,DIV,0,0,0
+289,FinancialTimes,3,time,SPAN,0,0,1
+290,FoxNews,1,headline,H1,0,0,0
+291,FoxNews,3,datePublished,TIME,0,0,1
+292,FoxNews,4,articleBody,DIV,0,0,0
+293,FoxNews,2,http://www.foxnews.com/on-air/personalities/david-b-samadi/bio/#s=r-z,A,0,0,0
+294,FoxNews,2,http://www.foxnews.com/archive/lauren-blanchard,A,0,0,0
+295,FoxNews,2,http://www.foxnews.com/archive/loren-grush,A,0,0,0
+296,FreeSpeech,1,title,H1,0,0,0
+297,FreeSpeech,4,node-additional-content,SECTION,0,0,0
+298,FreeSpeech,3,created,LI,0,0,1
+299,GreatReporter,1,title,H1,0,0,0
+300,GreatReporter,3,"dc:date dc:created",SPAN,0,0,1
+301,GreatReporter,4,"field-item even",DIV,0,0,0
+399,Independent,3,"caption meta inline-pipes-list",UL,0,0,1
+397,Independent,4,text-wrapper,DIV,0,0,0
+307,LATimes,1,trb_ar_hl_t,H1,0,0,0
+308,LATimes,4,trb_ar_page,DIV,0,0,0
+309,LATimes,2,trb_embed_related_credit,DIV,0,0,0
+431,TheGlobeandmail,2,"byline author vcard selectionShareable",P,0,0,0
+312,MiamiHerald,3,,PCLASS,0,0,1
+313,MiamiHerald,1,,H1CLASS,0,0,0
+411,NewsBlaze,4,td-post-content,DIV,0,0,0
+405,MSNBC,3,article-date-posted,TIME,0,0,1
+317,MSNBC,1,headline,H1,0,0,0
+408,NewsBlaze,1,entry-title,H1,0,0,0
+409,NewsBlaze,2,http://newsblaze.com/author/mina/,A,0,0,0
+320,MSNBC,4,"field field-name-body field-type-text-with-summary field-label-hidden",DIV,0,0,0
+410,NewsBlaze,3,"entry-date updated td-module-date",TIME,0,0,1
+406,MSNBC,2,author,SPAN,0,0,0
+324,PBS,1,single-title,H1,0,0,0
+425,SkyNews,2,last-updated__day,SPAN,0,0,0
+328,PBS,4,articleBody,DIV,0,0,0
+415,PBS,3,meta,DIV,0,0,1
+330,PBS,4,"entry-content cf",DIV,0,0,0
+332,Reuters,1,article-headline,H1,0,0,0
+333,Reuters,4,"column1 col col-10",DIV,0,0,0
+334,Reuters,3,timestamp,SPAN,0,0,1
+335,Reuters,2,byline,SPAN,0,0,0
+336,Reuters,2,byline,SPAN,0,0,0
+337,SkyNews,1,true,SPAN,0,0,0
+338,SkyNews,4,content-column,DIV,0,0,0
+339,Telegraph,1,"headline name",H1,0,0,0
+340,Telegraph,4,body,DIV,0,0,0
+341,Telegraph,3,byline,DIV,0,0,1
+342,Telegraph,2,author,A,0,0,0
+343,TheGlobeandmail,1,entry-title,H1,0,0,0
+433,USAToday,2,"asset-metabar-author asset-metabar-item",SPAN,0,0,0
+346,TheGlobeandmail,4,"column-2 gridcol",DIV,0,0,0
+432,TheTimesUK,2,f-author,STRONG,0,0,0
+430,TheGlobeandmail,3,entry-meta,DIV,0,0,1
+349,TheTimesUK,1,f-ha,H1,0,0,0
+350,TheTimesUK,3,f-regular-update,DIV,0,0,1
+351,TheTimesUK,2,http://www.thetimes.co.uk/tto/public/profile/Philippe-Naughton,A,0,0,0
+352,TheTimesUK,4,"contentpage currentpage",DIV,0,0,0
+353,UPI,2,http://www.upi.com/author/Ben-Hooper/,A,0,0,0
+354,UPI,1,"<H1 class=""st_headline title"" itemprop=""headline"">",,0,1,0
+355,UPI,3,"meta grey",DIV,0,0,1
+356,UPI,4,article,DIV,0,0,0
+357,USAToday,1,util-bar-share-summary-title,H4,0,0,0
+358,USAToday,2,"<A rel=""author"" href=""http://www.usatoday.com/staff/993/liz-szabo/"">",,0,1,0
+359,USAToday,1,"<H4 class=""util-bar-share-summary-title"">",,0,1,0
+360,USAToday,3,"asset-metabar-time asset-metabar-item nobyline",SPAN,0,0,1
+361,USAToday,4,"asset-double-wide double-wide p402_premium",DIV,0,0,0
+362,WorldTribune,4,entry-content,DIV,0,0,0
+363,WorldTribune,3,"published updated",TIME,0,0,1
+364,WorldTribune,2,,STRONG,0,0,0
+365,WorldTribune,1,"<H1 class=""entry-title single-post-title"" itemprop=""headline"">",,0,1,0
+366,WSJ,3,timestamp,TIME,0,0,1
+367,WSJ,1,wsj-article-headline,H1,0,0,0
+368,WSJ,2,name,SPAN,0,0,0
+369,WSJ,4,wsj-snippet-body,DIV,0,0,0
+370,ABCNews,1,name,H1,0,0,0
+371,ABCNews,3,date,DIV,0,0,1
+372,ABCNews,4,storyText,DIV,0,0,0
+373,ABCNews,4,storyText,DIV,0,0,0
+379,BBC,3,"publication-date index-body",SPAN,0,0,1
+378,BBC,3,"publication-date index-body",SPAN,0,0,1
+383,Boston,4,"l-story-txt-share article-txt-top no-flow entry-txt",DIV,0,0,0
+384,Boston,4,page1,DIV,0,0,0
+385,ChicagoTribune,2,author,A,0,0,0
+386,ChicagoTribune,3,trb_embed_related_caption,DIV,0,0,1
+437,CNN,4,pg-rail-tall__body,DIV,0,0,0
+389,EarthTimes,1,,H2,0,0,0
+392,EuroNews,1,,H1,0,0,0
+391,EuroNews,1,,H1,0,0,0
+412,PBS,2,meta-author,SPAN,0,0,0
+403,MiamiHerald,4,story-target,DIV,0,0,0
+438,CNN,2,,STRONG,0,0,0
+439,CNN,3,cnn_strytmstmp,DIV,0,0,1
+440,CNN,4,cnn_strycntntlft,DIV,0,0,0
+441,CNN,2,,B,0,0,0
+445,Chosunilbo,4,par,DIV,1,0,0
+446,ABCAU,4,article,DIV,0,0,0
