@@ -1,5 +1,5 @@
 # Web Content Mining with News Article Dataset
-We want to extract only useful information from news article because there are lots of useless (e.g. advertisement) in there. At the same time we want to show our machine learning based model is better than rule based model in terms of dealing with new types of website. The research has been publihsed at [KST International Conference](http://ieeexplore.ieee.org/document/7886134/) (*SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree*). Also, there is the [presentation](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
+We want to extract only useful information from news article because there are lots of useless (e.g. advertisement) in there. At the same time we want to show our machine learning based model is better than rule based model in terms of dealing with new types of website. Note that some patterns are very different to each other even though they are news websites. The research has been publihsed at [KST International Conference](http://ieeexplore.ieee.org/document/7886134/) (*SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree*). Also, there is the [presentation](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
 
 
 ## Prerequisites
@@ -27,15 +27,23 @@ python make_main.py outer
 ```
 * Train and test with the different kinds of news website (outer test)
 
-## Example
-
+#### Example
+![](/assets/example.PNG)
 
 
 ## Contribution
-* 
+* Web content mining using machine learning model
+* Robustly deal with new data drawn by new website, which rule based can't predict (shown from outer test)
+* Given small amount of dataset with high variance, SVM with kernel was best among logistic regression and multilayer neural network, etc. 
 
 ## Summary
+* Not optimize hyperparameters of model in order to predict well new data from new websites.
+* Based on HTML file structure, design feature vectors in which elements are either contiuous or discrete.
+* Build the machine learning pipeline for this task.
 
+_about resources_
+* Some materials about html files are: [[.xlsx]](https://1drv.ms/x/s!AllPqyV9kKUrg3qOK2DE7P-TSWW3)(tag name and attribute list), [[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3mmTjb6YsLD_wzi)(page source for only paragraph), [[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3sV7zNGUFPfNsvQ)(page source for date and paragraph)
+* Certificate of the conference [[link]](https://github.com/gritmind/web-content-mining/blob/master/assets/certificate_of_contributions.pdf)
 
 ## Acknowledgement
 Korea Institute of Science and Technology Information (KISTI) and University of Science and Technology (UST), Korea (2016.7 ~ 2016.10)
