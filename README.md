@@ -1,5 +1,5 @@
 # Web Content Mining with News Article Dataset
-We want to extract only useful information from news article because there are lots of unuseful (e.g. advertisement) in there. At the same time we want to show our machine learning based model is better than rule based model in terms of dealing with new types of website. This research is publihsed at [KST International Conference](http://ieeexplore.ieee.org/document/7886134/) (*SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree*). Also, there is the [presentation](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
+We want to extract only useful information from news article because there are lots of unuseful (e.g. advertisement) in there. At the same time we want to show our machine learning based model is better than rule based model in terms of dealing with new types of website. This research has been publihsed at [KST International Conference](http://ieeexplore.ieee.org/document/7886134/) (*SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree*). Also, there is the [presentation](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
 
 
 ## Prerequisites
