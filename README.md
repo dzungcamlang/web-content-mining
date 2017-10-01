@@ -47,5 +47,7 @@ _about resources_
 * Certificate of the conference [[link]](https://github.com/gritmind/web-content-mining/blob/master/assets/certificate_of_contributions.pdf)
 
 ## Acknowledgement
-Korea Institute of Science and Technology Information (KISTI) and University of Science and Technology (UST) (2016.7 ~ 2016.10)
+Korea Institute of Science and Technology Information (KISTI) <br>
+University of Science and Technology (UST) <br>
+2016.7 ~ 2016.10
 
