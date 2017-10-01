@@ -8,15 +8,28 @@
 
 
 ## Prerequisites
+* python 3.5.2
+* nltk 3.2.2
+* scikit-learn 0.19.0
+* bs4 4.5.1 (BeatifulSoup)
+* pandas 0.20.3
 
-* Python (BeautifulSoup, NLTK)
-* Dataset: news web pages
+## Dataset
+We have collected about 2500 news articles published by 13 different media. You can download it in here. Note that the type of data is just a html file, which is not annotated. 
 
 ## Usage
+```
+python make_trainset.py
+```
+
+## Example
+
 
 
 ## Contribution
 
+
+## Summary
 
 
 ## Acknowledgement
