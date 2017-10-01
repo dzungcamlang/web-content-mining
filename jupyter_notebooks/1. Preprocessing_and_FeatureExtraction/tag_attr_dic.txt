@@ -1,0 +1,27 @@
+article articles
+story stories
+body
+section
+inner
+published
+top
+subcolumns subcolumn
+container containers
+header headers
+meta
+copy
+item
+comments
+border
+wrapper
+banner
+component components
+group
+content contents
+title
+timestamp time datetime
+headline
+paragraph
+page
+text
+data
