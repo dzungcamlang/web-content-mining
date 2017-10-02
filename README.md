@@ -10,7 +10,7 @@ We want to extract only useful information from news article because there are l
 * pandas 0.20.3
 
 ## Dataset
-We have collected about 2500 news articles published by 13 different news websites. You can download it in [here](https://drive.google.com/open?id=0By4RRGJEeCR5YjBiZVd2dkdQWms). Note that the type of data is just a html file, which is not annotated. 
+We have collected about 2500 news articles published by 13 different news websites. You can download it in [here](https://drive.google.com/open?id=0By4RRGJEeCR5YjBiZVd2dkdQWms). Note that the data is just html file, which is not annotated. 
 
 ## Usage
 ```
