@@ -33,7 +33,7 @@ python make_main.py outer
 
 ## Contribution
 * Web content mining using machine learning model
-* Robustly deal with new data drawn by new website, which rule based can't predict (shown from outer test)
+* ML-based models robustly deal with new data drawn by new websites, which rule based can't predict well (shown from outer test)
 * Given small amount of dataset with high variance, SVM with kernel was best among logistic regression and multilayer neural network, etc. 
 
 ## Summary
