@@ -45,7 +45,7 @@ python make_main.py outer
 
 _About Resources_
 * Some materials about html files are: (tag name and attribute list)[[.xlsx]](https://1drv.ms/x/s!AllPqyV9kKUrg3qOK2DE7P-TSWW3), (page source for only paragraph)[[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3mmTjb6YsLD_wzi), (page source for date and paragraph)[[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3sV7zNGUFPfNsvQ)
-* Rule-based model is *InSciteCralwer* made by KISTI [(korean paper)](http://semantics.kisti.re.kr/publications/files/DOMESTIC_JOURNAL/DJ-063.pdf). The limits of this model are described in [here]().
+* Rule-based model is *InSciteCralwer* made by KISTI [(korean paper)](http://semantics.kisti.re.kr/publications/files/DOMESTIC_JOURNAL/DJ-063.pdf). The limits of this model are described in [here](https://1drv.ms/w/s!AllPqyV9kKUrhCgbkwn5MvmfTz6S).
 * Certificate of the conference [[link]](https://github.com/gritmind/web-content-mining/blob/master/assets/certificate_of_contributions.pdf)
 
 ## Acknowledgement
