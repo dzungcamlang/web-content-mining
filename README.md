@@ -19,11 +19,11 @@ python make_trainset.py
 * Annotate data based on rule list (where is title, date, paragraph in each news website)
 * Extract feature vectors out excel files
 ```
-python make_main.py inner
+python main.py inner
 ```
 * Train and test with the same kinds of news website (inner test) 
 ```
-python make_main.py outer
+python main.py outer
 ```
 * Train and test with the different kinds of news website (outer test)
 
