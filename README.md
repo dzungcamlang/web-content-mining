@@ -41,7 +41,8 @@ python make_main.py outer
 * Based on HTML file structure (using BeautifulSoup), design feature vectors in which elements are either contiuous or discrete.
 * Not optimize hyperparameters of model in order to predict well new data from new websites.
 * Test with n-fold cross validation for showing robustness for new websites.
-* If we have enough dataset, we may don't need outer test and neural networks would be the best and we can use text data as feature representations. 
+* If we have enough dataset, we may don't need outer test and neural networks would be the best and we can use text data as feature representations.
+* Actually, the training data is annotated by myself with some rules. This is somewhat counterintuitive to use machine learning based models. But, we believed that when using machine learning based model with some rules, we can generalize well data with new rules. You can see the results on the outer test. 
 
 _About Resources_
 * Some materials about html files are: (tag name and attribute list)[[.xlsx]](https://1drv.ms/x/s!AllPqyV9kKUrg3qOK2DE7P-TSWW3), (page source for only paragraph)[[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3mmTjb6YsLD_wzi), (page source for date and paragraph)[[.doc]](https://1drv.ms/w/s!AllPqyV9kKUrg3sV7zNGUFPfNsvQ)
