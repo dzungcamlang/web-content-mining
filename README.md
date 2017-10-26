@@ -37,10 +37,18 @@ python main.py outer
 * Given small amount of dataset with high variance, SVM with kernel was best among logistic regression and multilayer neural network, etc. 
 
 ## Summary
+
+_About Models_
 * Build the machine learning pipeline for this task.
-* Based on HTML file structure (using BeautifulSoup), design feature vectors in which elements are either contiuous or discrete.
 * Not optimize hyperparameters of model in order to predict well new data from new websites.
 * Test with n-fold cross validation for showing robustness for new websites.
+
+_About Features_
+* Domain knowledge: understanding HTML syntax
+* Information Gain: (1) tree structure (2) hierarchical relationship (3) tag information (name, attribute, content)
+* Feature Type: continuous feature (frequency, ratio), discrete feature (a certain word exist or not)
+
+_About Dataset_
 * If we have enough dataset, we may don't need outer test and neural networks would be the best and we can use text data as feature representations.
 * Actually, the training data is annotated by myself with some rules extracted by *InSciteCralwer*. This is somewhat counterintuitive to use machine learning based models. But, we believed that when using machine learning based model with some rules, we can generalize well data with new rules. You can see the results on the outer test. 
 
