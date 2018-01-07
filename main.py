@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Oct 15 13:59:06 2016
-
 @author: Office
 """
 import os, csv, sys
@@ -62,10 +61,8 @@ if arg_str == 'inner':
     cross_val_3 = labeled_dataset[int(len(labeled_dataset)*0.6):int(len(labeled_dataset)*0.8)]
     cross_val_4 = labeled_dataset[int(len(labeled_dataset)*0.8):int(len(labeled_dataset)*1.0)]
 
-
-
     for i in range(0, 5):
-
+        
         # Assign train and test dataset
         if i==0: 
             shuf_test_dataset = cross_val_0
@@ -174,9 +171,6 @@ if arg_str == 'inner':
     print('\n')
     print(mean_std_print(c0p_list,c0r_list,c0f_list,c0s_list, c1p_list,c1r_list,c1f_list,c1s_list, c2p_list,c2r_list,c2f_list,c2s_list, c3p_list,c3r_list,c3f_list,c3s_list))
 
-
-    
-    
 elif arg_str == 'outer':
     
     ### Prepare Dataset for outer test
@@ -215,10 +209,8 @@ elif arg_str == 'outer':
             shuf_test_dataset = test5
             shuf_train_dataset = train5 
     
-    
         shuf_train_dataset = [row for row in shuf_train_dataset if len(row)==length_features]
         shuf_test_dataset = [row for row in shuf_test_dataset if len(row)==length_features]
-
         
         ### Split X and Y
         X_train, X_test = [], []
@@ -249,8 +241,7 @@ elif arg_str == 'outer':
         # for inner test
         test_X = X_test
         test_y = Y_test
-        
-        
+                
         clf2 = SVC()
         clf2.fit(X_train, Y_train) 
         prediction_SVM = clf2.predict(test_X)
@@ -258,8 +249,7 @@ elif arg_str == 'outer':
         target_names = ['class 0', 'class 1', 'class 2', 'class 3']
         a = classification_report(test_y, prediction_SVM, target_names=target_names)
         #print(a)
-        
-        
+                
         p_micro_list.append(metrics.precision_score(test_y, prediction_SVM, average='micro'))
         r_micro_list.append(metrics.recall_score(test_y, prediction_SVM, average='micro'))
         f_micro_list.append(metrics.f1_score(test_y, prediction_SVM, average='micro')) 
@@ -267,8 +257,7 @@ elif arg_str == 'outer':
         p_macro_list.append(metrics.precision_score(test_y, prediction_SVM, average='macro'))
         r_macro_list.append(metrics.recall_score(test_y, prediction_SVM, average='macro'))
         f_macro_list.append(metrics.f1_score(test_y, prediction_SVM, average='macro'))
-        
-        
+                
         c0p = a[72]+a[73]+a[74]+a[75]
         c0r = a[82]+a[83]+a[84]+a[85]
         c0f = a[92]+a[93]+a[94]+a[95]
@@ -309,8 +298,7 @@ elif arg_str == 'outer':
         c3f_list.append(c3f)
         c3s_list.append(c3s)    
        
-    
-    
+        
     # Print out Results
     print('\n')
     print('******************************* OUTER TEST *******************************')  
@@ -321,12 +309,8 @@ elif arg_str == 'outer':
     # micro, macro
     print('\n')
     print('MICRO avg.:\t', "%0.2f" % (np.mean(np.array(p_micro_list))*100), "(%0.2f)" % (np.std(np.array(p_micro_list))*100), '\t\t', "%0.2f" % (np.mean(np.array(r_micro_list))*100), "(%0.2f)" % (np.std(np.array(r_micro_list))*100), '\t\t', "%0.2f" % (np.mean(np.array(f_micro_list))*100), "(%0.2f)" % (np.std(np.array(f_micro_list))*100))
-    
     print('MACRO avg.:\t', "%0.2f" % (np.mean(np.array(p_macro_list))*100), "(%0.2f)" % (np.std(np.array(p_micro_list))*100), '\t\t', "%0.2f" % (np.mean(np.array(r_macro_list))*100), "(%0.2f)" % (np.std(np.array(r_macro_list))*100), '\t\t', "%0.2f" % (np.mean(np.array(f_macro_list))*100), "(%0.2f)" % (np.std(np.array(f_macro_list))*100))
-    
-    
 
-    
 else:
     print('wrong or empty argument!')
     print('please type: python main.py inner or python main.py outer')
