@@ -1,7 +1,8 @@
 # Web Content Mining with News Article Dataset
 We build a classifier that automatically extracts only useful information (e.g. content) from an article where there are lots of useless information (e.g. advertisement). We verify that our machine learning based model is better than rule based model (*InSciteCralwer*) through outer test, even though our problem is somewhat deterministic (rules are useful!). Also, machine learning based model was possible to predict articles with new types, which rule-based doesn't predict at all. Note that patterns cah be changed according to news-website, section of it and the time (developer-style).
 
-The paper based on this research has been publihsed at KST International Conference: [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/). Here is the [presentation (.ppt)](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
+The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/). 
+Here is the [presentation (.ppt)](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
 
 
 ## Prerequisites
