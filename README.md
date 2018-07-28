@@ -3,7 +3,8 @@ We build a classifier that automatically extracts only useful information (e.g. 
 
 뉴스 기사에서 광고, 관련 뉴스 섹션 등과 같이 불필요한 정보는 제외하고 제목, 기사, 저자와 같은 유용한 정보만 추출하기 위한 기계학습 기반 분석기를 설계함. 다양한 통계기반의 자질과 HTML 문법 기반의 자질들을 설계하여 모델의 성능을 높임. 뉴스 웹 사이트에 따라 새로운 규칙이 등장하지만 규칙 기반 모델에 비해 우리가 설계한 기계학습 기반의 분석기는 잘 동작함.
 
-:page_with_curl: The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/). <br>
+:page_with_curl: The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/).
+
 Here is the [presentation (.ppt)](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
 
 
