@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# transform each html file to a multi-dimensional numerical vector.
+# for this, we do feature engineering.
+
 from bs4 import BeautifulSoup
 import numpy as np
 #nltk.download()
