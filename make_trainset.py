@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# transform each html file to a multi-dimensional numerical vector.
-# for this, we do feature engineering.
+# this file is sub-main function for feature engineering.
+# import feature_deisgn.py file for using several feature functions.
 
 from bs4 import BeautifulSoup
 import numpy as np
