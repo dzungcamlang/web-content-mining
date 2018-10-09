@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Oct 15 13:59:06 2016
-@author: Office
+This file is for main function.
+Execute inner test and outer test.
 """
+
 import os, csv, sys
 import numpy as np
 #from sklearn.model_selection import train_test_split
@@ -44,9 +45,9 @@ p_micro_list, r_micro_list, f_micro_list = [], [], []
 p_macro_list, r_macro_list, f_macro_list = [], [], []
 
 
-
-
-
+##################
+""" Inner Test """
+##################
 if arg_str == 'inner':
 
     ### Load Dataset (feature vectors)
@@ -111,7 +112,6 @@ if arg_str == 'inner':
         test_y = Y_test
         
         ### Train Model
-        ##############################################
         clf2 = SVC()
         clf2.fit(X_train, Y_train) 
         prediction_SVM = clf2.predict(test_X)
@@ -171,6 +171,9 @@ if arg_str == 'inner':
     print('\n')
     print(mean_std_print(c0p_list,c0r_list,c0f_list,c0s_list, c1p_list,c1r_list,c1f_list,c1s_list, c2p_list,c2r_list,c2f_list,c2s_list, c3p_list,c3r_list,c3f_list,c3s_list))
 
+##################
+""" Outer Test """
+##################    
 elif arg_str == 'outer':
     
     ### Prepare Dataset for outer test
