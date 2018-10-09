@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-This file is for main function.
-Execute inner test and outer test.
-"""
+# This file is for main function.
+# Execute inner test and outer test.
 
 import os, csv, sys
 import numpy as np
