@@ -1,19 +1,15 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 13 10:49:37 2016
+# there are lots of unnecesarry leaf nodes in a html file.
+# so we need to remove them.
+# this mitigates unbalanced classification problem
 
-@author: Office
-"""
 from bs4 import BeautifulSoup
 from feature_design import *
-
 
 def find_leaf_node(tag):
     if tag.string!=None and tag.string!=' ' and len(list(tag.children))==1 and len(list(tag.descendants))==1:
         return tag
 
-       
-    
 def html_preprocessing(soup):
 
     ##### Remove tag content, keeping tag itself
@@ -42,7 +38,6 @@ def html_preprocessing(soup):
         for match in soup.find_all(tag):
             match.replaceWithChildren()
     
-    
     ##### Removing both tag and its content
     ## <head> tag : 그냥 통째로 삭제. 주로 태그들이 body에 있다. html구조 변형도 미미하므로 그냥 삭제한다.
     ## 보통 haed tag에는 css, style 정보들이 많다. 
@@ -55,15 +50,13 @@ def html_preprocessing(soup):
     #for comment in findtoure:
     #    fixed_text = unicode(comment).replace('boy', 'girl')
     #    comment.replace_with(fixed_text)
-    
-    
+        
     ##### Replace a tag with a text
     ## In order to deal with tag type (not ordinary text), we translate soup as str(soup)
     # <br> 정보를 남겨둬야 한다. 하지만, 그대로 남겨두게 되면 lean node filter 기준에 부합되므로, 옳지 않은 결과를 초래하게 된다.
     # 따라서 <br> 대신에 (br)로 대체한다.
     soup = BeautifulSoup(str(soup).replace("<br>", "(br)"))
-    
-    
+        
     ## hyperlink tag such as <`a href`>
     for tag in soup.findAll('a', href=True):
         tag.wrap(soup.new_tag("grit"))
@@ -82,7 +75,7 @@ def html_preprocessing(soup):
 #            if word=='': split_list.remove('')
 #        if split_list[0]=='grit' and split_list[-1]=='grit':     
 #            leaf_tag.parent.name = 'grit'
-            
+       
     return soup
 
 def filtering_full_hyperlink(tag):
@@ -133,7 +126,6 @@ def filtering_tagattrs(tag_attr_values):
     
     final_a_list = new_list.split(' ')
    
-
     #print final_a_list
 
     # Check the list 
@@ -172,40 +164,3 @@ def filtering_tagattrs(tag_attr_values):
     if token==1: return 0
     else: return 1
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
