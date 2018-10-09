@@ -1,15 +1,7 @@
 # Web Content Mining with News Article Dataset
 We build a classifier that automatically extracts only useful information (e.g. content) from an article where there are lots of useless information (e.g. advertisement). We verify that our machine learning based model is better than rule based model (*InSciteCralwer*) through outer test, even though our problem is somewhat deterministic (rules are useful!). Also, machine learning based model was possible to predict articles with new types, which rule-based doesn't predict at all. Note that patterns cah be changed according to news-website, section of it and the time (developer-style).
 
-* 뉴스 웹 페이지의 광고,추천뉴스 등과 같은 노이즈 정보 필터링이 필요
-* 뉴스 웹 페이지 포맷과 심지어 사이트의 포맷까지 시간에 따라 변하는 특징
-* 소프트 의사결정을 하는 기계학습 기반 추출기 개발
-* 효과적인 분류를 위해 리프 노드 분류 단위 설정
-* 돔-트리 구조, 계층적 특징, 태그 정보를 활용한 자질 설계
-   - 다양한 종류의 빈도수, 비율 기반 연속형 자질
-   - 다양한 종류의 단어, 문자 기반 이산형 자질
-* 규칙 기반과 버금가는 inner test 성능 & 규칙 기반을 훨씬 뛰어넘는 outer test 성능
-
+![](/assets/pipeline.PNG)
 
 The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/).
 
@@ -49,6 +41,16 @@ python main.py outer
 * Web content mining using machine learning model with feature engineering (HTML syntax) 
 * ML-based models robustly deal with new data drawn by **new news-websites**, which rule based can't predict well (shown from outer test) and deals with almost 100% to new data drawn by known news-websites, which rule based can perpectly predict. 
 * Given small amount of dataset with high variance, SVM with kernel was best among logistic regression and multilayer neural network, etc.
+
+## 주요내용
+* 뉴스 웹 페이지의 광고,추천뉴스 등과 같은 노이즈 정보 필터링이 필요
+* 뉴스 웹 페이지 포맷과 심지어 사이트의 포맷까지 시간에 따라 변하는 특징
+* 소프트 의사결정을 하는 기계학습 기반 추출기 개발
+* 효과적인 분류를 위해 리프 노드 분류 단위 설정
+* 돔-트리 구조, 계층적 특징, 태그 정보를 활용한 자질 설계
+   - 다양한 종류의 빈도수, 비율 기반 연속형 자질
+   - 다양한 종류의 단어, 문자 기반 이산형 자질
+* 규칙 기반과 버금가는 inner test 성능 & 규칙 기반을 훨씬 뛰어넘는 outer test 성능
 
 ## Summary
 
