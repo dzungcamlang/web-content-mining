@@ -73,6 +73,9 @@ _About Resources_
 * Rule-based model is *InSciteCralwer* made by KISTI [(korean paper)](http://semantics.kisti.re.kr/publications/files/DOMESTIC_JOURNAL/DJ-063.pdf). The limits of this model are described in [here](https://1drv.ms/w/s!AllPqyV9kKUrhCgbkwn5MvmfTz6S).
 * Certificate of the conference [[link]](https://github.com/gritmind/web-content-mining/blob/master/assets/certificate_of_contributions.pdf)
 
+## Further Study
+* 단일 Bottom-up 프로세스을 넘어 Bottom-up과 Top-down이 결합된 하이브리드 방식 개발
+
 ## Acknowledgement
 Korea Institute of Science and Technology Information (KISTI) <br>
 University of Science and Technology (UST) <br>
