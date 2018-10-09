@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # there are lots of unnecesarry leaf nodes in a html file.
 # so we need to remove them.
-# this mitigates unbalanced classification problem
+# this mitigates unbalanced classification problem.
 
 from bs4 import BeautifulSoup
 from feature_design import *
