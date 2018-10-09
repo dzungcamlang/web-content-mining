@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 15 13:59:06 2016
+# 데이터를 로드, 샘플링, 프린트 등을 하기 위한 함수들이 정의되어 있는 파일
+# 데이터 처리를 위한 함수들의 집합소
 
-@author: Office
-"""
 import random
 
 import os, csv
@@ -20,20 +18,14 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
-
 global labeled_dataset
 labeled_dataset = []
 number_of_file = 0
 
 
-
-
-
-
-
 def load_data(dataset_path, num_of_test_sample):
     
-        # Sampling process
+    # Sampling process
     group_of_items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] 
     num_to_select = num_of_test_sample # test set을 구성할 언론사 폴더 개수                          
     list_of_random_items = random.sample(group_of_items, num_to_select)
@@ -49,9 +41,6 @@ def load_data(dataset_path, num_of_test_sample):
     labeled_test_dataset = sample_csv_data_load_from_multiple_folders(dataset_path, labeled_dataset, random_list, 0) # train 1
     
     return labeled_train_dataset, labeled_test_dataset
-
-
-
 
 
 def load_data_aug_publisher(dataset_path, num_of_test_sample, n_of_publisher):
@@ -86,9 +75,6 @@ def load_data_aug_publisher(dataset_path, num_of_test_sample, n_of_publisher):
     return labeled_train_dataset, labeled_test_dataset
 
 
-
-
-
 def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_percent, length_features, end_point_for_feature_scaling):
     # Data Load
 
@@ -102,7 +88,6 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
     labeled_train_dataset, class_1_test = train_test_split(labeled_train_dataset, train_size = sample_percent)
     labeled_test_dataset, class_2_test = train_test_split(labeled_test_dataset, train_size = sample_percent)
     #####
-    
     
     # '[4' 이런식으로 찍히는거 '4'로 변환
     for row in labeled_train_dataset:
@@ -139,7 +124,6 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
 #    nor = len(labeled_test_dataset)
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
 #            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
-
 
     #########
     # Sampling
@@ -170,9 +154,7 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
 #    nor = len(labeled_test_dataset)
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
 #            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
-    
-    
-    
+
     ### Join dataset
     outer_train_dataset = train_class_1_dataset+train_class_2_dataset+train_class_3_dataset+train_class_4_dataset
     outer_test_dataset = test_class_1_dataset+test_class_2_dataset+test_class_3_dataset+test_class_4_dataset
@@ -180,7 +162,6 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
     ### Shuffle dataset
     outer_shuf_train_dataset = shuffle(outer_train_dataset)
     outer_shuf_test_dataset = shuffle(outer_test_dataset)
-
 
     ### Split X and Y
     outer_X_train = []
@@ -208,8 +189,6 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
 
     for idx, row in enumerate(outer_shuf_test_dataset): outer_Y_test.append(outer_shuf_test_dataset[idx][0])
 
-
-
     ### Convert to numpy array with data-type
     X_train = np.array(outer_X_train, dtype='float32')
     Y_train = np.array(outer_Y_train, dtype='int64')
@@ -223,10 +202,6 @@ def sampling_data_total(labeled_train_dataset, labeled_test_dataset, sample_perc
     return X_train, Y_train, test_X, test_y
 
 
-
-
-
-
 def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_percent, length_features, end_point_for_feature_scaling):
     # Data Load
 
@@ -234,7 +209,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
     # 혹시 필요할지도.. 20 length가 아니면 모두 filtering
     labeled_train_dataset = [row for row in labeled_train_dataset if len(row)==length_features]
     labeled_test_dataset = [row for row in labeled_test_dataset if len(row)==length_features]
-    
     
     # '[4' 이런식으로 찍히는거 '4'로 변환
     for row in labeled_train_dataset:
@@ -272,10 +246,8 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
 #            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
 
-
     #########
     # Sampling
-
     train_class_1_dataset, class_1_test = train_test_split(train_class_1_dataset, train_size = sample_percent)
     train_class_2_dataset, class_2_test = train_test_split(train_class_2_dataset, train_size = sample_percent)
     train_class_3_dataset, class_3_test = train_test_split(train_class_3_dataset, train_size = sample_percent)
@@ -287,7 +259,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
     test_class_4_dataset, class_4_test = train_test_split(test_class_4_dataset, train_size = sample_percent)
 
     #########
-
 #    print "After Sampling"
 #    print '*** labeled_train_dataset ***'
 #    print ('#class1:', len(train_class_1_dataset), '#class2:', len(train_class_2_dataset),
@@ -303,8 +274,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
 #            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
     
-    
-    
     ### Join dataset
     outer_train_dataset = train_class_1_dataset+train_class_2_dataset+train_class_3_dataset+train_class_4_dataset
     outer_test_dataset = test_class_1_dataset+test_class_2_dataset+test_class_3_dataset+test_class_4_dataset
@@ -312,7 +281,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
     ### Shuffle dataset
     outer_shuf_train_dataset = shuffle(outer_train_dataset)
     outer_shuf_test_dataset = shuffle(outer_test_dataset)
-
 
     ### Split X and Y
     outer_X_train = []
@@ -331,7 +299,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
 
     for idx, row in enumerate(outer_shuf_train_dataset): outer_Y_train.append(outer_shuf_train_dataset[idx][0])
 
-
     for idx, row in enumerate(outer_shuf_test_dataset):
         for j in range(1, end_point_for_feature_scaling+1):
             outer_temp.append(outer_shuf_test_dataset[idx][j])
@@ -339,8 +306,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
         outer_temp = [] 
 
     for idx, row in enumerate(outer_shuf_test_dataset): outer_Y_test.append(outer_shuf_test_dataset[idx][0])
-
-
 
     ### Convert to numpy array with data-type
     X_train = np.array(outer_X_train, dtype='float32')
@@ -353,8 +318,6 @@ def sampling_data_class(labeled_train_dataset, labeled_test_dataset, sample_perc
     test_y = outer_Y_test
     
     return X_train, Y_train, test_X, test_y
-
-
 
 
 def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_features, end_point_for_feature_scaling):
@@ -398,10 +361,7 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
 #            '#class3:', len(test_class_3_dataset), '#class4:', len(test_class_4_dataset))
 #    nor = len(labeled_test_dataset)
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
-#            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
-
-
-   
+#            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100) 
 
 #    print "After Sampling"
 #    print '*** labeled_train_dataset ***'
@@ -417,9 +377,7 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
 #    nor = len(labeled_test_dataset)
 #    print ('%class1:', len(test_class_1_dataset)/float(nor)*100, '%class2:', len(test_class_2_dataset)/float(nor)*100,
 #            '%class3:', len(test_class_3_dataset)/float(nor)*100, '%class4:', len(test_class_4_dataset)/float(nor)*100)
-    
-    
-    
+
     ### Join dataset
     outer_train_dataset = train_class_1_dataset+train_class_2_dataset+train_class_3_dataset+train_class_4_dataset
     outer_test_dataset = test_class_1_dataset+test_class_2_dataset+test_class_3_dataset+test_class_4_dataset
@@ -427,7 +385,6 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
     ### Shuffle dataset
     outer_shuf_train_dataset = shuffle(outer_train_dataset)
     outer_shuf_test_dataset = shuffle(outer_test_dataset)
-
 
     ### Split X and Y
     outer_X_train = []
@@ -446,7 +403,6 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
 
     for idx, row in enumerate(outer_shuf_train_dataset): outer_Y_train.append(outer_shuf_train_dataset[idx][0])
 
-
     for idx, row in enumerate(outer_shuf_test_dataset):
         for j in range(1, end_point_for_feature_scaling+1):
             outer_temp.append(outer_shuf_test_dataset[idx][j])
@@ -454,8 +410,6 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
         outer_temp = [] 
 
     for idx, row in enumerate(outer_shuf_test_dataset): outer_Y_test.append(outer_shuf_test_dataset[idx][0])
-
-
 
     ### Convert to numpy array with data-type
     X_train = np.array(outer_X_train, dtype='float32')
@@ -470,7 +424,6 @@ def no_sampling_data(labeled_train_dataset, labeled_test_dataset, length_feature
     return X_train, Y_train, test_X, test_y
 
 
-
 def SVM(X_train, Y_train, test_X, test_y):
     
     # Train the model 
@@ -482,9 +435,7 @@ def SVM(X_train, Y_train, test_X, test_y):
     
     target_names = ['class 0', 'class 1', 'class 2', 'class 3']
     print(classification_report(test_y, prediction_SVM, target_names=target_names))
-    
-    
-    
+       
     
 def classification_result_report(a):
    
@@ -508,7 +459,6 @@ def classification_result_report(a):
     c3f_list = []
     c3s_list = []
 
-
     c0p = a[72]+a[73]+a[74]+a[75]
     c0r = a[82]+a[83]+a[84]+a[85]
     c0f = a[92]+a[93]+a[94]+a[95]
@@ -531,13 +481,12 @@ def classification_result_report(a):
     
     return c0p_list, c0r_list, c0f_list, c0s_list, c1p_list, c1r_list, c1f_list, c1s_list, c2p_list, c2r_list, c2f_list, c2s_list, c3p_list, c3r_list, c3f_list, c3s_list
         
-    
-    
 
 def string_to_float(li):
     for i, j in enumerate(li):
         li[i] = float(j)
     return li
+
 
 def mean_std_print(l1, l2, l3, l4, k1, k2, k3, k4, m1, m2, m3, m4, n1, n2, n3, n4):
     
@@ -567,10 +516,8 @@ def mean_std_print(l1, l2, l3, l4, k1, k2, k3, k4, m1, m2, m3, m4, n1, n2, n3, n
     print('DATE:\t\t', "%0.2f" % (np.mean(k1)*100), "(%0.2f)" % (np.std(k1)*100), '\t\t', "%0.2f" % (np.mean(k2)*100), "(%0.2f)" % (np.std(k2)*100), '\t\t', "%0.2f" % (np.mean(k3)*100), "(%0.2f)" % (np.std(k3)*100))
     print('PARAGRAPH:\t', "%0.2f" % (np.mean(m1)*100), "(%0.2f)" % (np.std(m1)*100), '\t\t', "%0.2f" % (np.mean(m2)*100), "(%0.2f)" % (np.std(m2)*100), '\t\t', "%0.2f" % (np.mean(l3)*100), "(%0.2f)" % (np.std(m3)*100))
     print('NOISE:\t\t', "%0.2f" % (np.mean(n1)*100), "(%0.2f)" % (np.std(n1)*100), '\t\t', "%0.2f" % (np.mean(n2)*100), "(%0.2f)" % (np.std(n2)*100), '\t\t', "%0.2f" % (np.mean(l3)*100), "(%0.2f)" % (np.std(n3)*100))
- 
-    
+   
 
-    
 #######################################################################################################    
     
 ### Description <csv_data_load_from_multiple_folders> ###
@@ -595,8 +542,7 @@ def csv_data_load_from_multiple_folders(path, list_for_storing, token): # input 
                 if list(publisher)[-1]=='1': break
             elif token==1:
                 if not list(publisher)[-1]=='1': break
-                    
-            
+                                
             #f = open(file_path, 'rt')
             #reader = csv.reader(f)
             #print(reader)
@@ -617,9 +563,7 @@ def csv_data_load_from_multiple_folders(path, list_for_storing, token): # input 
 #    print "[ csv_data_load_from_multiple_folders complete ]"
 #    print('#of_files:',number_of_file, '#of_leafs:',len(list_for_storing), 'from data_manipulation_library.py')  
 
-
     return list_for_storing # output: 2D list
-
 
 
 def sample_csv_data_for_aug_publisher(path, list_for_storing, random_list, test_or_train, n_of_aug): # input format is 1D list
@@ -656,8 +600,7 @@ def sample_csv_data_for_aug_publisher(path, list_for_storing, random_list, test_
  #   print('#of_files:',number_of_file, '#of_leafs:',len(list_for_storing), 'from data_manipulation_library.py')           
     
     return list_for_storing # output: 2D list       
-    
-    
+        
 
 def sample_csv_data_load_from_multiple_folders(path, list_for_storing, random_list, test_or_train): # input format is 1D list
     
@@ -730,14 +673,12 @@ def new_load_dataset(path, random_list, test_or_train): # input format is 1D lis
                     pass                
                 
     return list_for_storing # output: 2D list  
-    
-    
+        
 
 def mean_normalization(x, mean, std):
     if std==0: return 0
     else: return (x-mean)/std    
     
-
 
 ### Description <feature_scaling> ###
 # input list & output list are the same format (2D Array)
@@ -765,7 +706,6 @@ def feature_scaling(list2D, idx_start, idx_end):
         for j, element in enumerate(row):
             list2D[j][i+idx_start] = mean_normalization(float(list2D[j][i+idx_start]), mean[i], std[i])
             
-
 ###### 원시적인 버젼
 #     data1, data2, data3, data4, data5, data6, data7, data8, data9 = [], [], [], [], [], [], [], [], []
 #     for row in list2D:
@@ -814,7 +754,6 @@ def feature_scaling(list2D, idx_start, idx_end):
     print("[ feature_scaling complete ]")
     return list2D    
     
-
     
 ### outer test를 위해..
 def bit_and_op(list1, list2):
@@ -825,6 +764,7 @@ def bit_and_op(list1, list2):
         if list2[i] == 1:
             result_list[i] = 1
     return result_list
+
 
 def ran_test_list(n_publisher):
     
@@ -842,8 +782,3 @@ def ran_test_list(n_publisher):
     list5 = bit_and_op(bit_and_op(a[10], a[11]), a[12]) # 3개
     
     return [list1, list2, list3, list4, list5]    
-    
-    
-
-
-    
