@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 13 10:50:57 2016
+# 자질 설계를 위한 함수 정의
+# 학습 데이터를 만들기 위한 각 뉴스 사이트의 규칙 리스트가 포함되어 있음
 
-@author: Office
-"""
 import nltk
 import numpy as np
 
-
-
-
 ####################################################################### Leaf_information.py #################
+
 ##### For non-sequential data
+#####
 # extracting number of all tokens including strings and integers
 # 일반적인 pyhton 문법인 split로 token화 하면, 단순히 공백으로 구분하기 때문에 정밀하지 못하다. tokenization tool을 사용해서 . ? , 등 정밀하게 나눌 수 있도록 하자 
-
 
 def clean_data_for_tag_string(tag_string):
     nltk_token = nltk.word_tokenize(tag_string)
@@ -29,7 +25,6 @@ def clean_data_for_tag_string(tag_string):
     new_nltk_token_list = [w.lower() for w in new_nltk_token_list] # make uppercase to be lowercase
     return new_nltk_token_list
 
-
 def clean_tag_string_with_no_lowercase(tag_string):
     nltk_token = nltk.word_tokenize(tag_string)
     new_list = ' '.join(nltk_token)
@@ -41,7 +36,6 @@ def clean_tag_string_with_no_lowercase(tag_string):
     new_list = new_list.replace(':', ' ')
     new_nltk_token_list = new_list.split(' ')    
     return new_nltk_token_list
-
 
 def n_of_tok(tag): # 단어/숫자 개수 
     return len(clean_data_for_tag_string(tag.string))
@@ -55,7 +49,6 @@ def n_of_int(tag):
             count = count+1
     return count
 
-
 def n_of_uppercase(tag):
     new_nltk_token_list = clean_tag_string_with_no_lowercase(tag.string)
     count=0
@@ -65,14 +58,12 @@ def n_of_uppercase(tag):
                 count += 1
     return count
     
-
 def is_hyper_bothends(tag):
     tag_string_list = clean_data_for_tag_string(tag.string)
     if tag_string_list[0]=='starthyper' and tag_string_list[-1]=='endhyper':
         return 1
     else:
         return 0
-
     
 def is_comma_in_string(tag):
     token=0
@@ -91,7 +82,6 @@ def ratio(numer, denom):
     else: 
         return float(numer/float(denom))
     
-
 def uuper_ratio(numer, denom):
     #smoothing_term = 0.000000001
     #return (numer+smoothing_term)/(denom+smoothing_term)
@@ -101,23 +91,19 @@ def uuper_ratio(numer, denom):
         result = (numer/float(denom))
         if result>=1.0: result = 1
         return result
-    
-    
+        
 # extracting number of tag's parents
 def n_of_parents(tag):
     return (len(list(tag.parents)))
-
 
 # extracting number of tag's siblings
 def n_total_sib(tag): return (len(list(tag.previous_siblings)))+(len(list(tag.next_siblings)))
 def n_pre_sib(tag): return (len(list(tag.previous_siblings)))
 def n_next_sib(tag): return ((len(list(tag.next_siblings))))
 
-
 def is_tag(tag, what):
     if tag.name==what: return 1
     else: return 0
-
     
 def allli_is_tag(taglist, what): # ex input: (nested tag list, 'body') 
     token=False 
@@ -126,9 +112,7 @@ def allli_is_tag(taglist, what): # ex input: (nested tag list, 'body')
         if tag==what: token=True 
     if token==True: return 1    
     else: return 0    
-    
-    
-    
+     
 from dateutil.parser import parse
 def is_date(tag):
     string = tag.string.split(' ')
@@ -148,6 +132,7 @@ def is_date(tag):
 
     
 ##### For sequential data
+#####
 # [['abc'], 'def'] or ['abc', ['def']] -> ['abc', 'def']
 def convt_1d_arr(old_list): 
     
@@ -198,30 +183,23 @@ def select_attr_value(list):
 # for extracting tag name and tag attributes (not class) 
 def extract_tag_name_attrs(tag):
     tag_name_attrs_list = [] # 모든 Sequential 정보가 들어가는 하나의 vector
- 
-
 
     ### 5단계 부모 노드 정보
     #tag_name_attrs_list.append(tag.parent.parent.parent.name) # parnet tag name
     #tag_name_attrs_list.append(str(tag.parent.parent.parent.parent.parent.attrs).replace(",", "(c)"))
 
-
     ### 3단계 부모 노드 정보
     #tag_name_attrs_list.append(tag.parent.parent.parent.name) # parnet tag name
     tag_name_attrs_list.append(str(tag.parent.parent.parent.attrs).replace(",", "(c)"))
 
-
     ### 2단계 부모 노드 정보
     tag_name_attrs_list.append(tag.parent.parent.name) # parnet tag name
     tag_name_attrs_list.append(str(tag.parent.parent.attrs).replace(",", "(c)"))
-
     
     ### 1단계 부모 노드 정보
     tag_name_attrs_list.append(tag.parent.name) # parnet tag name
     tag_name_attrs_list.append(str(tag.parent.attrs).replace(",", "(c)"))
     
-
-
 #    ### Attract parent (a single) tag attribute
 #    parent_attrs_list = convt_1d_arr(tag.parent.attrs.values()) # my tag attributs
 #        
@@ -250,10 +228,6 @@ def extract_tag_name_attrs(tag):
 #    else: # attrs_list에 여러개가 있으면
 #        tag_name_attrs_list.append(select_attr_value(attrs_list)) # select_attr_value 함수 기준으로 속성값 할당
 
-    
-
-
-
 # 그냥 dictlist에 있는 모든 attributes들을 list에 append    
 #     for index in attrs_list:
 #         #if(len(index[0])==1):
@@ -268,14 +242,12 @@ def extract_tag_name_attrs(tag):
     
     return tag_name_attrs_list
 
-
-
-
 ##### For extracting nested level of a leaf node
+#####
 def extract_nested_level(tag):
     return '.'.join(reversed([p.name for p in tag.parentGenerator() if p])) # utf-8 encoding이 필요하다. main함수에서 불러올 떄, utf-8 encoding을 하자.
-########## End of Leaf_information.py ##########
 
+############################################################################## End of Leaf_information.py ##########
 
 
 def clean_data_for_tag_attr(tag_attr_values):
@@ -299,8 +271,6 @@ def clean_data_for_tag_attr(tag_attr_values):
     
     return final_a_list
 
-
-
 def make_1hot_features(tag, whatkind):
     
     if whatkind=='tag_name':
@@ -321,8 +291,7 @@ def make_1hot_features(tag, whatkind):
                         tag_name_dic_1hot_list[i] = 1
                 
         return tag_name_dic_1hot_list
-    
-    
+        
     if whatkind=='tag_attr':
         # Extract tag attributes from data
         tag_attr_from_data = []
@@ -337,7 +306,6 @@ def make_1hot_features(tag, whatkind):
         tag_attr_from_data += tag_1parent_attr_list
         tag_attr_from_data += tag_2parent_attr_list
         tag_attr_from_data += tag_3parent_attr_list
-
         
         # Load tag name dictionary
         tag_attr_dic = [row.rstrip('\n') for row in open('assets/tag_attr_dic.txt')]
@@ -350,7 +318,6 @@ def make_1hot_features(tag, whatkind):
                         tag_attr_dic_1hot_list[i] = 1
                 
         return tag_attr_dic_1hot_list
-
     
     if whatkind=='tag_string':
         # Extract tag attributes from data
@@ -360,16 +327,13 @@ def make_1hot_features(tag, whatkind):
         #tag_1parent_string_list = clean_data_for_tag_string(tag.parent.string)
         #tag_2parent_string_list = clean_data_for_tag_string(tag.parent.parent.string)
         #tag_3parent_string_list = clean_data_for_tag_string(tag.parent.parent.parent.string)
-        
-        
+                
         # merge
         tag_string_from_data += tag_string_list
         #tag_string_from_data += tag_1parent_string_list
         #tag_string_from_data += tag_2parent_string_list
         #tag_string_from_data += tag_3parent_string_list
-
-        
-        
+      
         # Load tag name dictionary
         noise_word_dic = [row.rstrip('\n') for row in open('assets/noise_word_dic.txt')]
         noise_word_dic_1hot_list = [0]*len(noise_word_dic)
@@ -382,10 +346,8 @@ def make_1hot_features(tag, whatkind):
                 
         return noise_word_dic_1hot_list
 
-
-
-
 ###############################################################################################
+
 # 각 언론사 웹사이트별 제목, 날짜, 저자, 본문 규칙 리스트
 # publisher 변수가 main에 상주해야 되기 때문에 어쩔 수 없이...
 def labeling_data(tag, publisher):
@@ -654,9 +616,4 @@ def labeling_data(tag, publisher):
             if tag.parent.get('class')==['article-copy']: return 3
             else: return 4       
         else: return 4
-
-
-
-
-
 
