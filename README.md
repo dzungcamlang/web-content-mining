@@ -3,7 +3,7 @@ We build a classifier that automatically extracts only useful information (e.g. 
 
 ![](/assets/pipeline.PNG)
 
-The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](http://ieeexplore.ieee.org/document/7886134/).
+The paper for this research has been published at the 2017-9th International Conference on Knowledge and Smart Technology (KST), named as [SVM-based Web Content Mining with Leaf Classification Unit from DOM-tree](https://1drv.ms/b/s!AllPqyV9kKUrwyAeaF0XsG2ZWGqG).
 
 Here is the [presentation (.ppt)](https://1drv.ms/p/s!AllPqyV9kKUrgieYsNFYWKqCvjKo) for the conference. 
 
